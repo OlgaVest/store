@@ -1,0 +1,5 @@
+2025-07-08 13:55:05.372669 - Директория создана (или уже существует): C:\Users\o_koz\Documents\PYTHON_разработчик\УРОК_12\project_root\data/raw
+2025-07-08 13:55:05.373686 - Директория создана (или уже существует): C:\Users\o_koz\Documents\PYTHON_разработчик\УРОК_12\project_root\data/processed
+2025-07-08 13:55:05.373686 - Директория создана (или уже существует): C:\Users\o_koz\Documents\PYTHON_разработчик\УРОК_12\project_root\logs
+2025-07-08 13:55:05.373686 - Директория создана (или уже существует): C:\Users\o_koz\Documents\PYTHON_разработчик\УРОК_12\project_root\backups
+2025-07-08 13:55:05.374688 - Директория создана (или уже существует): C:\Users\o_koz\Documents\PYTHON_разработчик\УРОК_12\project_root\output

@@ -1,0 +1,23 @@
+[
+    {
+        "filename": "ascii_text_processed.txt",
+        "original_text": "Hello, world! Plain ASCII.",
+        "processed_text": "hELLO, WORLD! pLAIN ascii.",
+        "size_bytes": 26,
+        "last_modified": "2025-07-08T14:43:58.960653"
+    },
+    {
+        "filename": "latin1_text_processed.txt",
+        "original_text": "Bonjour tout le monde! Ça va?",
+        "processed_text": "bONJOUR TOUT LE MONDE! çA VA?",
+        "size_bytes": 30,
+        "last_modified": "2025-07-08T14:43:58.972222"
+    },
+    {
+        "filename": "utf8_text_processed.txt",
+        "original_text": "Привет, мир! Это UTF-8.",
+        "processed_text": "пРИВЕТ, МИР! эТО utf-8.",
+        "size_bytes": 35,
+        "last_modified": "2025-07-08T14:43:58.988220"
+    }
+]

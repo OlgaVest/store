@@ -1,0 +1,60 @@
+import json
+from datetime import datetime
+from pathlib import Path
+
+# Путь к директории output
+output_dir = Path("output")
+output_dir.mkdir(parents=True, exist_ok=True)
+
+# Путь к итоговому отчёту
+report_path = output_dir / "final_report.json"
+
+# Данные отчёта
+report_data = {
+    "timestamp": datetime.now().isoformat(),
+    "tasks": [
+        {
+            "task": "Структура проекта и директории",
+            "status": "выполнено",
+            "notes": "Созданы папки: data/raw, data/processed, logs, backups, output, schemas, restored_data"
+        },
+        {
+            "task": "Создание и обработка файлов с разной кодировкой",
+            "status": "выполнено",
+            "notes": "Файлы успешно созданы и обработаны, результаты сериализованы в processed_data.json"
+        },
+        {
+            "task": "Сериализация информации о файлах",
+            "status": "выполнено",
+            "notes": "Создан файл file_info.json с данными о файлах в processed"
+        },
+        {
+            "task": "Архивация и восстановление",
+            "status": "выполнено",
+            "notes": "Создан архив резервной копии и выполнено восстановление"
+        },
+        {
+            "task": "JSON Schema валидация",
+            "status": "выполнено",
+            "notes": "JSON прошёл валидацию по file_info_schema.json"
+        }
+    ],
+    "difficulties": [
+        "Проблема с путём к JSON Schema (ошибка в названии файла)",
+        "Подключение библиотеки chardet вручную через терминал"
+    ],
+    "time_estimates": {
+        "setup_structure": "10 минут",
+        "file_creation_and_processing": "20 минут",
+        "serialization_and_backup": "15 минут",
+        "validation": "10 минут",
+        "итого": "примерно 55 минут"
+    },
+    "conclusion": "Проект выполнен успешно. Полученные навыки: работа с путями, кодировками, файлами, сериализацией, валидацией JSON."
+}
+
+# Сохраняем файл
+with open(report_path, "w", encoding="utf-8") as f:
+    json.dump(report_data, f, ensure_ascii=False, indent=4)
+
+print(f"Итоговый отчёт сохранён: {report_path}")

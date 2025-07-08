@@ -1,0 +1,23 @@
+[
+    {
+        "name": "ascii_text_processed.txt",
+        "path": "C:\\Users\\o_koz\\Documents\\PYTHON_разработчик\\УРОК_12\\project_root\\data\\processed\\ascii_text_processed.txt",
+        "size": 26,
+        "created": "2025-07-08T14:43:58.960653",
+        "modified": "2025-07-08T14:43:58.960653"
+    },
+    {
+        "name": "latin1_text_processed.txt",
+        "path": "C:\\Users\\o_koz\\Documents\\PYTHON_разработчик\\УРОК_12\\project_root\\data\\processed\\latin1_text_processed.txt",
+        "size": 30,
+        "created": "2025-07-08T14:43:58.971220",
+        "modified": "2025-07-08T14:43:58.972222"
+    },
+    {
+        "name": "utf8_text_processed.txt",
+        "path": "C:\\Users\\o_koz\\Documents\\PYTHON_разработчик\\УРОК_12\\project_root\\data\\processed\\utf8_text_processed.txt",
+        "size": 35,
+        "created": "2025-07-08T14:43:58.988220",
+        "modified": "2025-07-08T14:43:58.988220"
+    }
+]
