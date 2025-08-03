@@ -1,0 +1,61 @@
+<!-- main/templates/main/base.html -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Мой сайт{% endblock %}</title>
+    <!-- Подключение стилей (пока просто базовый стиль) -->
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f0f0f0; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        nav { margin-bottom: 20px; }
+        nav a { margin-right: 15px; text-decoration: none; color: #007bff; }
+        nav a:hover { text-decoration: underline; }
+        .messages { margin-bottom: 20px; }
+        .message { padding: 10px; margin-bottom: 5px; border-radius: 4px; }
+        .message.info { background-color: #d1ecf1; border: 1px solid #bee5eb; color: #0c5460; }
+        .message.success { background-color: #d4edda; border: 1px solid #c3e6cb; color: #155724; }
+        .message.warning { background-color: #fff3cd; border: 1px solid #ffeaa7; color: #856404; }
+        .message.error { background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; }
+        footer { margin-top: 40px; text-align: center; color: #6c757d; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="{% url 'profile' %}" style="text-decoration: none; color: inherit;">Мой сайт</a></h1>
+            <nav>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'profile' %}">Профиль</a>
+                    <a href="{% url 'message' %}">Сообщение</a>
+                    <a href="{% url 'logout' %}">Выйти</a>
+                {% else %}
+                    <a href="{% url 'login' %}">Войти</a>
+                    <a href="{% url 'register' %}">Регистрация</a>
+                {% endif %}
+            </nav>
+        </header>
+
+        <!-- Вывод сообщений Django -->
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="message {{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <main>
+            {% block content %}
+            <!-- Содержимое страницы будет вставлено сюда -->
+            {% endblock %}
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Мой сайт</p>
+        </footer>
+    </div>
+</body>
+</html>

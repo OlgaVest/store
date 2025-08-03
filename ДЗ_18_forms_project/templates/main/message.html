@@ -1,0 +1,16 @@
+<!-- main/templates/main/message.html -->
+
+{% extends "main/base.html" %}
+
+{% block title %}Отправить сообщение{% endblock %}
+
+{% block content %}
+<h2>Отправить сообщение</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Отправить</button>
+</form>
+{% endblock %}
+

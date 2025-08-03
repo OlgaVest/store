@@ -1,0 +1,9 @@
+/* static/main/css/styles.css */
+
+body {
+    background-color: #e9ecef; /* Изменим цвет фона для проверки */
+}
+
+.highlight {
+    background-color: yellow; /* Пример класса для выделения */
+}
